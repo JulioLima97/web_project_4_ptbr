@@ -1,0 +1,39 @@
+@import url(../vendor/normalize.css);
+@import url(../fonts/inter.css);
+
+@import url(../blocks/body/body.css);
+
+@import url(../blocks/button/__add/button__add.css);
+@import url(../blocks/button/__close-popup/button__close-popup.css);
+@import url(../blocks/button/__edit/button__edit.css);
+@import url(../blocks/button/__save/button__save.css);
+
+@import url(../blocks/card/__image/card__image.css);
+@import url(../blocks/card/__info/card__info.css);
+@import url(../blocks/card/__photo/card__photo.css);
+@import url(../blocks/card/__places/card__places.css);
+@import url(../blocks/card/__title/card__title.css);
+@import url(../blocks/card/card.css);
+
+@import url(../blocks/footer/__text/footer__text.css);
+@import url(../blocks/footer/footer.css);
+
+@import url(../blocks/header/header.css);
+
+@import url(../blocks/input/__name/input__name.css);
+@import url(../blocks/input/__profission/input__profission.css);
+
+@import url(../blocks/logo/__photo/logo__photo.css);
+@import url(../blocks/logo/logo.css);
+
+@import url(../blocks/page/page.css);
+
+@import url(../blocks/perfil/__card/perfil__card.css);
+@import url(../blocks/perfil/__name/perfil__name.css);
+@import url(../blocks/perfil/__photo/perfil__photo.css);
+@import url(../blocks/perfil/__profission/perfil__profission.css);
+@import url(../blocks/perfil/perfil.css);
+
+@import url(../blocks/popup/__container/popup__container.css);
+@import url(../blocks/popup/__form/popup__form.css);
+@import url(../blocks/popup/__title/popup__title.css);

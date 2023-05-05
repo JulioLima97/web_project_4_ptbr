@@ -1,0 +1,21 @@
+.button__edit {
+  box-sizing: border-box;
+  width: 24px;
+  height: 24px;
+  background-color: #000000;
+  border: 1px solid #FFFFFF;
+  position: relative;
+  cursor: pointer;
+}
+
+.button__edit:hover {
+  opacity: 0.8;
+  border-radius: 2px;
+}
+
+@media screen and ( max-width: 320px) {
+  .button__edit{
+    width: 18px;
+    height: 18px;
+    }
+}

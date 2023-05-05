@@ -1,0 +1,10 @@
+.footer {
+    width: 880px;
+    display: flex;
+}
+
+@media screen and (max-width: 320px) {
+    .footer {
+        justify-content: center;
+    }  
+}

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprendendo a aprender</title>
+  <link rel="stylesheet" href="./pages/index.css">
+</head>
+
+<body class="body">
+  <div class="page">
+    <header class="header">
+      <div class="logo">
+        <img src="./images/logo.png" class="logo__photo" alt="logo de Around TheUS">
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="perfil">
+        <img src="./images/perfil.jpg" class="perfil__photo" alt="foto de perfil do usuário">
+          <div class="perfil__card">
+            <h1 class="perfil__name">Jacques Cousteau</h1>
+            <button class="button__edit"><img src="./images/image-button-edit.png" alt="desenho de uma caneta"></button>
+            <h2 class="perfil__profission">Explorar</h2>
+          </div>
+        <button class="button__add"><img src="images/image-button-add.png" alt="um sinal de mais usado como botão de adicionar"></button>
+      </section>
+
+      <div class="popup__container">
+        <form class="popup__form">
+          <h2 class="popup__title">Editar perfil</h2>
+          <input class="input__name" type="text" name="firstName" placeholder="Nome">
+          <input class="input__profission" type="text" name="aboutMe" placeholder="Sobre mim">
+          <button class="button__save" type="submit">Salvar</button>
+          <button class="button__close-popup"><img class="button__image-close" src="./images/image-button-close.png" alt="grande icone em 'x' para usado para fechar o popup"></button>
+        </form>
+      </div>
+
+      <ul class="card">
+        <li class="card__places">
+          <img src="./images/cardPhoto1.jpg" class="card__photo" alt="vista de um rio com arvores ao redor">
+          <div class="card__info">
+            <h2 class="card__title">Vale de Yosemite</h2>
+            <img src="./images/img-info.jpg" class="card__image" alt="imagem de coração de curtir">
+          </div>
+        </li>
+
+        <li class="card__places">
+          <img src="./images/cardPhoto2.png" class="card__photo" alt="vista de um lado com montanhas ao redor">
+          <div class="card__info">
+            <h2 class="card__title">Lago Louise</h2>
+            <img src="./images/img-info.jpg" class="card__image" alt="imagem de coração de curtir">
+          </div>
+        </li>
+
+        <li class="card__places">
+          <img src="./images/cardPhoto3.png" class="card__photo" alt="vista de montanhas de floresta com por do sol">
+          <div class="card__info">
+            <h2 class="card__title">Montanhas Carecas</h2>
+            <img src="./images/img-info.jpg" class="card__image" alt="imagem de coração de curtir">
+          </div>
+        </li>
+
+        <li class="card__places">
+          <img src="./images/cardPhoto4.png" class="card__photo" alt="vista de mosntanhar em clima frio, de noite e com muitas estrelas">
+          <div class="card__info">
+            <h2 class="card__title">Latemar</h2>
+            <img src="./images/img-info.jpg" class="card__image" alt="imagem de coração de curtir">
+          </div>
+          </li>
+
+        <li class="card__places">
+          <img src="./images/cardPhoto5.png" class="card__photo" alt="vista de montanhas em clima frio de dia">
+          <div class="card__info">
+            <h2 class="card__title">Vanoise National Park</h2>
+            <img src="./images/img-info.jpg" class="card__image" alt="imagem de coração de curtir">
+          </div>
+          </li>
+
+        <li class="card__places">
+          <img src="./images/cardPhoto6.png" class="card__photo" alt="vista de um lago com montanhas ao redor, e barcos nas margens do lago">
+          <div class="card__info">
+            <h2 class="card__title">Lago di Braies</h2>
+            <img src="./images/img-info.jpg" class="card__image" alt="imagem de coração de curtir">
+          </div>
+        </li>
+      </ul>
+    </main>
+
+      <footer class="footer">
+        <p class="footer__text">© 2021 Around The U.S.</p>
+      </footer>
+    <script src="./scripts/script.js"></script>
+  </div>
+</body>

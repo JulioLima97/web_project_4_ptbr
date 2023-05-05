@@ -1,0 +1,16 @@
+.perfil {
+    width: 880px;
+    height: 120px;
+    display: flex;
+    margin-top: 40px;
+}
+
+@media screen and (max-width: 320px) {
+    .perfil {
+        width: 282px;
+        height: 286px;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 42px;
+    }  
+}
