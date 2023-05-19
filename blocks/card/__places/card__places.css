@@ -1,7 +1,23 @@
 .card__places {
-    width: 282px;
-    height: 361px;
-    background: #FFFFFF;
-    border-radius: 10px;
-    position: relative;
+  max-width: 282px;
+  width: 100%;
+  height: 361px;
+  background: #FFFFFF;
+  border-radius: 10px;
+  position: relative;
 }
+
+@media screen and ( max-width: 768px) {
+  .card__places {
+    max-width: 352px;
+    height: 431px
+  }
+}
+
+
+@media screen and ( max-width: 320px) {
+  .card__places {
+    max-width: 282px;
+    height: 361px;
+    }
+  }

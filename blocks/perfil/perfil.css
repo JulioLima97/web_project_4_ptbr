@@ -1,16 +1,28 @@
 .perfil {
-    width: 880px;
-    height: 120px;
-    display: flex;
-    margin-top: 40px;
+  max-width: 880px;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  margin: 40px auto 0;
+  align-items: center;
+}
+
+@media screen and (max-width: 880px) {
+  .perfil {
+    max-width: 733px;
+    height: 320px;
+    flex-direction: column;
+    align-items: center;
+    margin: 42px auto 0;
+  }
 }
 
 @media screen and (max-width: 320px) {
-    .perfil {
-        width: 282px;
-        height: 286px;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 42px;
-    }  
+  .perfil {
+    max-width: 282px;
+    height: 286px;
+    flex-direction: column;
+    align-items: center;
+    margin: 42px auto 0;
+  }
 }

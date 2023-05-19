@@ -1,10 +1,9 @@
-const editButton = document.querySelector('.button__edit');
-const popup = document.querySelector('.popup__container');
-const closeButton = document.querySelector('.button__close-popup');
-const formPopup = document.querySelector('.popup__form');
-const saveButton = document.querySelector('.button__save');
-const inputName = formPopup.querySelector('.input__name');
-const inputProfission = formPopup.querySelector('.input__profission');
+const editButton = document.querySelector('.button-edit');
+const popup = document.querySelector('.popup');
+const closeButton = document.querySelector('.button-close-popup');
+const saveButton = document.querySelector('.button-save');
+const inputName = document.querySelector('.input-name');
+const inputProfission = document.querySelector('.input-description');
 const perfilName = document.querySelector('.perfil__name');
 const perfilProfission = document.querySelector('.perfil__profission');
 
@@ -12,12 +11,12 @@ const perfilProfission = document.querySelector('.perfil__profission');
 
 editButton.addEventListener('click', addPopupClassToDisplay)
   function addPopupClassToDisplay() {
-    popup.classList.add('popup__form');
+    popup.classList.add('popup_opened');
 }
 
 closeButton.addEventListener('click', removeDisplayFlexPopupClass)
   function removeDisplayFlexPopupClass() {
-    popup.classList.remove('popup__form');
+    popup.classList.remove('popup_opened');
 }
 
 saveButton.addEventListener('click', saveNewInputValues)
@@ -31,4 +30,4 @@ saveButton.addEventListener('click', saveNewInputValues)
         perfilProfission.textContent = inputProfission.value
       }
       removeDisplayFlexPopupClass();
-    }
+}

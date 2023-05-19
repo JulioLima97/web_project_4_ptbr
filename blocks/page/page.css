@@ -1,19 +1,16 @@
 .page {
   max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  justify-items: center;
-  flex-direction: column;
-  align-items: center;
+  background-color: black;
+  font-family: "Inter", Arial, Helvetica, sans-serif;
   }
 
-@media screen and ( max-width: 788px) {
+@media screen and ( max-width: 731px) {
   .page {
     max-width: 768px;
     }
 }
-
 
 @media screen and ( max-width: 320px) {
   .page {
