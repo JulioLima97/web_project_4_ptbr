@@ -4,13 +4,16 @@
 
 * Figma
 * Imagens
+* HTML
+* CSS
+* Javascript
 
 **Figma**
 
 * [Link para o projeto no Figma](https://www.figma.com/file/XfB6BSINvliub43JgKza1e/WEB.-Sprint-4.-Around-The-U.S.-desktop-%2B-mobile-pt)
 
-**Imagens**
+**Descrição**
 
-A maneira como você fará isso no trabalho é exportando imagens diretamente do Figma — recomendamos fazer isso para praticar mais. Não se esqueça de otimizá-los [aqui](https://tinypng.com/), para que seu projeto carregue mais rápido.
+Desta vez, ainda em parceria com a Practicum, desenvolvi um projeto chamado "EUA Afora" — uma página interativa onde os usuários podem adicionar, remover, ou curtir fotos. Ao qual além do HTML e CSS, foi utilizado o Javascript para definir o comportamento de interação com o site.
 
-Divirta-se com JavaScript!
+github: https://github.com/JulioLima97
