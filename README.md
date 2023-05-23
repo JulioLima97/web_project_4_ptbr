@@ -1,19 +1,6 @@
 # Projeto 4:  EUA Afora
 
-### Visão geral
-
-* Figma
-* Imagens
-* HTML
-* CSS
-* Javascript
-
-**Figma**
-
-* [Link para o projeto no Figma](https://www.figma.com/file/XfB6BSINvliub43JgKza1e/WEB.-Sprint-4.-Around-The-U.S.-desktop-%2B-mobile-pt)
-
-**Descrição**
-
-Desta vez, ainda em parceria com a Practicum, desenvolvi um projeto chamado "EUA Afora" — uma página interativa onde os usuários podem adicionar, remover, ou curtir fotos. Ao qual além do HTML e CSS, foi utilizado o Javascript para definir o comportamento de interação com o site.
-
-github: https://github.com/JulioLima97
+/*  - Título: "EUA Afora"
+    - Descrição: Um site que mostra ao usuário que logar, o perfil de um usuário que decidiu mostrar fotos de regiões para o qual já viajou nos Estados Unidos. 
+    - Planos de finalização do projeto: Através de todo o aprendizado que tive neste curso eu reproduzi este site. Desta vez dos conhecimentos já usados no projeto passado, desta vez com os conhecimentos obtido durante o curso foi incrementado o a ferramenta do javascript a utilização de uma caixa de entrada feita para preencher o nome e a informção do usuário para ser exibida no site.
+*/
