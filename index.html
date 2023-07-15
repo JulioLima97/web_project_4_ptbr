@@ -26,70 +26,52 @@
         <button class="button-add"><img src="images/image-button-add.png" alt="um sinal de mais usado como botão de adicionar"></button>
       </section>
 
-      <div class="popup">
+      <div class="popup popup-edit">
         <form class="popup__form">
           <h2 class="popup__title">Editar perfil</h2>
           <input class="input-name" type="text" name="firstName" placeholder="Nome">
           <input class="input-description" type="text" name="aboutMe" placeholder="Sobre mim">
           <button class="button-save" type="submit">Salvar</button>
-          <button class="button-close-popup"><img class="button__image-close" src="./images/image-button-close.png" alt="grande icone em 'x' para usado para fechar o popup"></button>
+          <button class="button-close-popup"><img class="button-close-popup__image" src="./images/image-button-close.png" alt="grande icone em 'x' para usado para fechar o popup"></button>
         </form>
       </div>
 
+      <div class="popup popup-add">
+        <form class="popup__form">
+          <h2 class="popup__title">Novo local</h2>
+          <input class="input-título" type="text" name="firstName" placeholder="Título">
+          <input class="input-link" type="text" name="aboutMe" placeholder="Link de imagem">
+          <button class="button-create" type="submit">Criar</button>
+          <button class="button-close-popup"><img class="button-close-popup__image" src="./images/image-button-close.png" alt="grande icone em 'x' para usado para fechar o popup"></button>
+        </form>
+      </div>
+
+      <div class="popup popup__screen">
+        <div class="popup__image">
+          <button class="button-close-popup popup-close"><img class="button-close-popup__image" src="./images/image-button-close.png" alt="grande icone em 'x' para usado para fechar o popup"></button>
+          <img src="" class="screen__image" alt="imagem que recebeu o click ampliada">
+          <h2 class="screen__title"></h2>
+        </div>
+      </div>
+
       <ul class="card">
-        <li class="card__places">
-          <img src="./images/cardPhoto1.jpg" class="card__photo" alt="vista de um rio com arvores ao redor">
-          <div class="card__info">
-            <h2 class="card__title">Vale de Yosemite</h2>
-            <img src="./images/img-info.jpg" class="card__image" alt="imagem de coração de curtir">
-          </div>
-        </li>
-
-        <li class="card__places">
-          <img src="./images/cardPhoto2.png" class="card__photo" alt="vista de um lado com montanhas ao redor">
-          <div class="card__info">
-            <h2 class="card__title">Lago Louise</h2>
-            <img src="./images/img-info.jpg" class="card__image" alt="imagem de coração de curtir">
-          </div>
-        </li>
-
-        <li class="card__places">
-          <img src="./images/cardPhoto3.png" class="card__photo" alt="vista de montanhas de floresta com por do sol">
-          <div class="card__info">
-            <h2 class="card__title">Montanhas Carecas</h2>
-            <img src="./images/img-info.jpg" class="card__image" alt="imagem de coração de curtir">
-          </div>
-        </li>
-
-        <li class="card__places">
-          <img src="./images/cardPhoto4.png" class="card__photo" alt="vista de mosntanhar em clima frio, de noite e com muitas estrelas">
-          <div class="card__info">
-            <h2 class="card__title">Latemar</h2>
-            <img src="./images/img-info.jpg" class="card__image" alt="imagem de coração de curtir">
-          </div>
-          </li>
-
-        <li class="card__places">
-          <img src="./images/cardPhoto5.png" class="card__photo" alt="vista de montanhas em clima frio de dia">
-          <div class="card__info">
-            <h2 class="card__title">Vanoise National Park</h2>
-            <img src="./images/img-info.jpg" class="card__image" alt="imagem de coração de curtir">
-          </div>
-          </li>
-
-        <li class="card__places">
-          <img src="./images/cardPhoto6.png" class="card__photo" alt="vista de um lago com montanhas ao redor, e barcos nas margens do lago">
-          <div class="card__info">
-            <h2 class="card__title">Lago di Braies</h2>
-            <img src="./images/img-info.jpg" class="card__image" alt="imagem de coração de curtir">
-          </div>
-        </li>
       </ul>
     </main>
 
       <footer class="footer">
         <p class="footer__text">© 2021 Around The U.S.</p>
       </footer>
+
+      <template id="template">
+        <li class="card__places">
+          <img src="" class="card__photo" alt="">
+          <button class="card__remove" alt="imagem pequena de uma lixeira"></button>
+          <div class="card__info">
+            <h2 class="card__title"></h2>
+            <img src="./images/img-info.jpg" class="card__image" alt="imagem de coração de curtir">
+          </div>
+        </li>
+      </template>
 
     <script src="./scripts/script.js"></script>
 </body>
