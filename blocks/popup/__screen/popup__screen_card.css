@@ -1,4 +1,4 @@
-.popup__card_screen {
+.popup__screen_card {
   position: sticky;
   max-width: 816px;
   height: 630px;
@@ -9,20 +9,20 @@
 }
 
 @media screen and (max-width: 880px) {
-  .popup__card_screen {
+  .popup__screen_card {
     max-width: 400px;
     height: 589px;
   }
 }
 
 @media screen and (max-width: 768px) {
-  .popup__card_screen {
+  .popup__screen_card {
     max-width: 300px;
   }
 }
 
 @media screen and (max-width: 320px) {
-  .popup__card_screen {
+  .popup__screen_card {
     max-width: 200px;
   }
 }
