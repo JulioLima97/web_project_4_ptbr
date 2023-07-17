@@ -1,7 +1,7 @@
 const editButton = document.querySelector('.button-edit');
 const popup_edit = document.querySelector('.popup-edit');
 const popup_add = document.querySelector('.popup-add');
-const popup_image = document.querySelector('.screen__popup');
+const popup_image = document.querySelector('.popup__screen');
 const addcloseButton = document.querySelector('.close-add');
 const editcloseButton = document.querySelector('.close-edit');
 const saveButton = document.querySelector('.button-save');
@@ -104,8 +104,8 @@ function renderCards(card) {
 
   cardElement.querySelector(".card__photo").addEventListener("click", () => {
 
-    const imageScreen = document.querySelector(".screen__image");
-    const titleScreen = document.querySelector(".screen__title");
+    const imageScreen = document.querySelector(".popup__image_screen");
+    const titleScreen = document.querySelector(".popup__title_screen");
 
     imageScreen.setAttribute("src", card.link);
     imageScreen.setAttribute("alt", card.name);
