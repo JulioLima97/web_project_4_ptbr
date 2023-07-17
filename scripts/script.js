@@ -104,8 +104,8 @@ function renderCards(card) {
 
   cardElement.querySelector(".card__photo").addEventListener("click", () => {
 
-    const imageScreen = document.querySelector(".popup-screen_image");
-    const titleScreen = document.querySelector(".popup-screen_title");
+    const imageScreen = document.querySelector(".popup-screen-image");
+    const titleScreen = document.querySelector(".popup-screen-title");
 
     imageScreen.setAttribute("src", card.link);
     imageScreen.setAttribute("alt", card.name);
