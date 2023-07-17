@@ -1,4 +1,4 @@
-.popup__screen_title {
+.popup-screen_title {
   width: 291px;
   height: 12px;
   font-style: normal;
@@ -9,5 +9,3 @@
   color: #FFFFFF;
   bottom: -10px;
 }
-
-

@@ -44,7 +44,7 @@
 
 @import url(../blocks/card/__remove/card__remove.css);
 
-@import url(../blocks/popup/__screen/popup__screen.css);
-@import url(../blocks/popup/__screen/popup__screen_card.css);
-@import url(../blocks/popup/__screen/popup__screen_image.css);
-@import url(../blocks/popup/__screen/popup__screen_title.css);
+@import url(../blocks/popup-screen/popup-screen.css);
+@import url(../blocks/popup-screen/popup-screen_card.css);
+@import url(../blocks/popup-screen/popup__screen_image.css);
+@import url(../blocks/popup-screen/popup__screen_title.css);
