@@ -10,7 +10,7 @@
 @media screen and ( max-width: 768px) {
   .card__places {
     max-width: 352px;
-    height: 431px
+    height: 431px;
   }
 }
 

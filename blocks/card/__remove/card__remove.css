@@ -1,0 +1,16 @@
+.card__remove {
+  background-image: url('../../../images/card__remove.png');
+  width: 18px;
+  height: 19px;
+  position: absolute;
+  right: 15px;
+  top: 18px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+
+.popup_opened {
+  display: block;
+ }
