@@ -10,7 +10,7 @@
   background-color: transparent;
 }
 
-
-.popup_opened {
-  display: block;
- }
+.card__remove:hover {
+  opacity: 0.8;
+  border-radius: 2px;
+}

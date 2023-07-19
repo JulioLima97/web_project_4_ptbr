@@ -8,7 +8,7 @@
 @import url(../blocks/button-edit/button-edit.css);
 @import url(../blocks/button-save/button-save.css);
 @import url(../blocks/button-create/button-create.css);
-@import url(../blocks/button-close-popup__image/__image/button-close-popup__image.css);
+@import url(../blocks/button-close-popup/__image/button-close-popup__image.css);
 
 @import url(../blocks/card/__image/card__image.css);
 @import url(../blocks/card/__info/card__info.css);
