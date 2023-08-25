@@ -1,0 +1,6 @@
+.button_edit-inactive {
+  background: #FFFFFF;
+  cursor: not-allowed;
+  opacity: 20%;
+  color: black;
+}

@@ -15,6 +15,7 @@ const addButton = document.querySelector(".button-add");
 const removeButton = document.querySelector(".card__remove");
 const likeButton = document.querySelector(".card__image");
 const imageClose = document.querySelector(".popup-close");
+const popup = Array.from(document.querySelectorAll(".popup"));
 
 addButton.addEventListener('click', addPopupClassToDisplay)
 function addPopupClassToDisplay() {
@@ -33,6 +34,8 @@ editButton.addEventListener('click', editPopupClassToDisplay)
 
 function editPopupClassToDisplay() {
   popupEdit.classList.add('popup_opened');
+  inputName.value = perfilName.textContent
+  inputProfission.value = perfilProfission.textContent
 }
 
 function removeDisplayEditPopupClass(e) {
@@ -41,9 +44,6 @@ function removeDisplayEditPopupClass(e) {
 }
 editCloseButton.addEventListener('click', removeDisplayEditPopupClass)
 
-
-
-
 function saveNewInputValues(e) {
   e.preventDefault();
     perfilName.textContent = inputName.value;
@@ -51,6 +51,20 @@ function saveNewInputValues(e) {
     removeDisplayEditPopupClass(e)
 }
 saveButton.addEventListener('click', saveNewInputValues)
+
+document.onkeydown = (evt) => {
+  if (evt.key === "Escape") {
+    popup.forEach((element) => {
+      element.classList.remove("popup_opened");
+    });
+  }
+};
+
+popup.forEach((container) => {
+  container.addEventListener("click", (evt) => {
+    evt.target.classList.remove("popup_opened");
+  });
+});
 
 const initialCards = [
   {

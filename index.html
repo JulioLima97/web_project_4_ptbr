@@ -27,21 +27,25 @@
     </section>
 
     <div class="popup popup-edit">
-      <form class="popup__form">
+      <form class="popup__form" name="form" novalidate>
         <h2 class="popup__title">Editar perfil</h2>
-        <input class="input-name" type="text" name="firstName" placeholder="Nome">
-        <input class="input-description" type="text" name="aboutMe" placeholder="Sobre mim">
-        <button class="button-save" type="submit">Salvar</button>
+        <input class="input-name" type="text" name="name" placeholder="Nome" required minlength="2" maxlenght="40">
+        <span class="span__name-message span"></span>
+        <input class="input-description" type="text" name="description" placeholder="Sobre mim" required minlength="2" maxlenght="40">
+        <span class="span__description-message span"></span>
+        <button class="button-save button_edit-inactive" type="submit">Salvar</button>
         <button class="button-close-popup popup-edit-close"><img class="button-close-popup__image" src="./images/image-button-close.png" alt="grande icone em 'x' para usado para fechar o popup"></button>
       </form>
     </div>
 
     <div class="popup popup-add">
-      <form class="popup__form">
+      <form class="popup__form" name="form" novalidate>
         <h2 class="popup__title">Novo local</h2>
-        <input class="input-título" type="text" name="firstName" placeholder="Título">
-        <input class="input-link" type="text" name="aboutMe" placeholder="Link de imagem">
-        <button class="button-create" type="submit">Criar</button>
+        <input class="input-título" type="text" name="title" placeholder="Título" required minlength="2" maxlenght="40">
+        <span class="span__title-message span"></span>
+        <input class="input-link" type="text" name="link" placeholder="Link de imagem" required minlength="2" maxlenght="40">
+        <span class="span__link-message span"></span>
+        <button class="button-create button_add-inactive" type="submit">Criar</button>
         <button class="button-close-popup popup-add-close"><img class="button-close-popup__image" src="./images/image-button-close.png" alt="grande icone em 'x' para usado para fechar o popup"></button>
       </form>
     </div>
@@ -74,5 +78,6 @@
   </template>
 
   <script src="./scripts/index.js"></script>
+  <script src="./scripts/validation.js"></script>
 </body>
 </html>
