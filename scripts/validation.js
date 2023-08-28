@@ -8,7 +8,7 @@ const enableValidation = ({
   const inputFieldsValidation = (input) => {
   input.addEventListener('input', function (event) {
   const element = event.target;
-  const messageSpan = document.querySelector(`.span__${element.name}-message`);
+  const messageSpan = document.querySelector(`.span-${element.name}-message`);
   if (!element.validity.valid) {
     input.classList.add(classToAddInput);
     messageSpan.textContent = element.validationMessage;
@@ -62,6 +62,6 @@ enableValidation({
   classToAddInput: 'input__error',
   editButtonSave: ".button-save",
   addButtonSave: ".button-create",
-  inactiveButtonSaveClass: "button_edit-inactive",
-  inactiveButtonAddClass: "button_add-inactive",
+  inactiveButtonSaveClass: "button-edit-inactive",
+  inactiveButtonAddClass: "button-add-inactive",
 });
