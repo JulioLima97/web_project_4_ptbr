@@ -26,7 +26,7 @@
   }
 }
 
-.button-create:hover {
+.button-create:not(:disabled):hover {
   opacity: 0.8;
   border-radius: 2px;
 }

@@ -37,24 +37,25 @@ const enableValidation = ({
     saveButtonInclude.classList.remove(inactiveButtonAddClass);
   };
 
+  const isValidForm = (inputsArray) => inputsArray.every((input) => input.validity.valid);
   const allForms = Array.from(document.forms);
-  for (const form of allForms) {
-    const inputs = Array.from(form.elements);
-    const isValidForm = () => inputs.every((input) => input.validity.valid);
 
-    inputs.forEach((element) => {
-      inputFieldsValidation(element);
-      element.addEventListener("input", function () {
-        console.log(isValidForm())
-        if (isValidForm()) {
-          enableButtons();
-        } else {
-          disableButtons();
-        }
-      });
+
+allForms.forEach(form => {
+  const inputs = Array.from(form.elements);
+
+  inputs.forEach((element) => {
+    inputFieldsValidation(element);
+    element.addEventListener("input", function () {
+      if (isValidForm(inputs)) {
+        enableButtons();
+      } else {
+        disableButtons();
+      }
     });
-  };
-};
+  });
+});
+}
 
 enableValidation({
   messageSelector: '.input__elemente-message',
