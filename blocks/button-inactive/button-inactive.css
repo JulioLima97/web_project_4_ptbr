@@ -1,6 +1,6 @@
-.button-add-inactive {
+.button-inactive {
   background: #FFFFFF;
   cursor: not-allowed;
+  opacity: 20%;
   color: black;
-  opacity: 0.2;
 }

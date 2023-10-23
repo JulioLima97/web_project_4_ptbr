@@ -27,33 +27,33 @@
     </section>
 
     <div class="popup popup-edit">
-      <form class="popup__form" name="form">
+      <form class="form-edit popup__form " name="form" id="form-edit-profile">
         <h2 class="popup__title">Editar perfil</h2>
-        <input class="input-name" type="text" name="name" placeholder="Nome" required minlength="2" maxlenght="40">
-        <span class="span-name-message span"></span>
-        <input class="input-description" type="text" name="description" placeholder="Sobre mim" required minlength="2" maxlenght="40">
-        <span class="span-description-message span"></span>
-        <button disabled class="button-save button-edit-inactive" type="submit">Salvar</button>
-        <button class="button-close-popup popup-edit-close"><img class="button-close-popup__image" src="./images/image-button-close.png" alt="grande icone em 'x' para usado para fechar o popup"></button>
+        <input class="input input-name" type="text" name="name" placeholder="Nome" required minlength="2" maxlenght="40">
+        <span class="span"></span>
+        <input class="input input-description" type="text" name="description" placeholder="Sobre mim" required minlength="2" maxlenght="40">
+        <span class="span"></span>
+        <button disabled class="button-save button-inactive" type="submit">Salvar</button>
+        <button class="button-close-popup close-edit"><img class="button-close-popup__image" src="./images/image-button-close.png" alt="grande icone em 'x' para usado para fechar o popup"></button>
       </form>
     </div>
 
     <div class="popup popup-add">
-      <form class="popup__form" name="form">
+      <form class="form-add popup__form" name="form" id="form-add-profile">
         <h2 class="popup__title">Novo local</h2>
-        <input class="input-título" type="text" name="title" placeholder="Título" required minlength="2" maxlenght="40">
-        <span class="span-title-message span"></span>
-        <input class="input-link" type="url" name="link" placeholder="Link de imagem" required minlength="2" maxlenght="40">
-        <span class="span-link-message span"></span>
-        <button disabled class="button-create button-add-inactive" type="submit">Criar</button>
-        <button class="button-close-popup popup-add-close"><img class="button-close-popup__image" src="./images/image-button-close.png" alt="grande icone em 'x' para usado para fechar o popup"></button>
+        <input class="input input-título" type="text" name="title" placeholder="Título" required minlength="2" maxlenght="40">
+        <span class="span"></span>
+        <input class="input input-link" type="url" name="link" placeholder="Link de imagem" required minlength="2" maxlenght="40">
+        <span class="span"></span>
+        <button disabled class="button-create button-inactive" type="submit">Criar</button>
+        <button class="button-close-popup close-add"><img class="button-close-popup__image" src="./images/image-button-close.png" alt="grande icone em 'x' para usado para fechar o popup"></button>
       </form>
     </div>
 
     <div class="popup popup-screen">
       <div class="popup-screen-card">
         <button class="button-close-popup popup-close"><img class="button-close-popup__image" src="./images/image-button-close.png" alt="grande icone em 'x' para usado para fechar o popup"></button>
-        <img src=" " class="popup-screen-image popup-screen-image:hover" alt="imagem que recebeu o click ampliada">
+        <img src="" class="popup-screen-image popup-screen-image:hover" alt="imagem que recebeu o click ampliada">
         <h2 class="popup-screen-title"></h2>
       </div>
     </div>
@@ -72,12 +72,17 @@
       <button class="card__remove card__remove:hover" alt="imagem pequena de uma lixeira"></button>
       <div class="card__info">
         <h2 class="card__title"></h2>
-        <img src="./images/img-info.jpg" class="card__image" alt="imagem de coração de curtir">
+        <img src="./images/img-info.jpg" class="card__image card__image:hover" alt="imagem de coração de curtir">
       </div>
     </li>
   </template>
 
-  <script src="./scripts/index.js"></script>
-  <script src="./scripts/validation.js"></script>
+
+  <script type="module" src="./scripts/initialCards.js"></script>
+  <script type="module" src="./scripts/Card.js"></script>
+  <script type="module" src="./scripts/FormValidator.js"></script>
+  <script type="module" src="./scripts/utils.js"></script>
+  <script type="module" src="./scripts/index.js"></script>
+  
 </body>
 </html>

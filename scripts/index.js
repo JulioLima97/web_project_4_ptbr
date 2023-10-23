@@ -1,74 +1,127 @@
+import {initialCards} from "./initialCards.js";
+import Card from "./Card.js"
+import { openPopup } from "./utils.js";
+import {closePopups} from "./utils.js";
+import { closeEsc } from "./utils.js";
+import FormValidator from "./FormValidator.js";
+
 const editButton = document.querySelector('.button-edit');
+const addButton = document.querySelector(".button-add");
 const popupEdit = document.querySelector('.popup-edit');
 const popupAdd = document.querySelector('.popup-add');
 const popupImage = document.querySelector('.popup-screen');
-const addCloseButton = document.querySelector('.popup-add-close');
-const editCloseButton = document.querySelector('.popup-edit-close');
-const saveButton = document.querySelector('.button-save');
+const addCloseButton = document.querySelector('.close-add');
+const editCloseButton = document.querySelector('.close-edit');
+const saveButton = document.querySelector(".button-save");
 const createButton = document.querySelector('.button-create')
 const inputName = document.querySelector('.input-name');
 const inputProfission = document.querySelector('.input-description');
 const perfilName = document.querySelector('.perfil__name');
 const perfilProfission = document.querySelector('.perfil__profission');
 const elementWithAllImages = document.querySelector(".card");
-const addButton = document.querySelector(".button-add");
-const removeButton = document.querySelector(".card__remove");
-const likeButton = document.querySelector(".card__image");
 const imageClose = document.querySelector(".popup-close");
 const popup = Array.from(document.querySelectorAll(".popup"));
+const titleCard = document.querySelector(".input-título")
+const urlImage = document.querySelector(".input-link")
+const formEditProfile = document.querySelector(".form-edit")
+const formAddPost = document.querySelector("#form-add-profile")
 
-// ==================== Add Popup================================
+// ====================Abrir e fechar Popup Add================================
 
+addButton.addEventListener('click', () => {
+  openPopup(popupAdd)
+})
 
-addButton.addEventListener('click', addPopupClassToDisplay)
-function addPopupClassToDisplay() {
-  document.addEventListener("keydown", escapeDelete);
-  popupAdd.classList.add('popup_opened');
-}
+addCloseButton.addEventListener("click", () => {
+  popupAdd.classList.remove("popup_opened")
+});
 
-addCloseButton.addEventListener('click', removeDisplayAddPopupClass)
-function removeDisplayAddPopupClass(e) {
-  e.preventDefault();
-  document.removeEventListener("keydown", escapeDelete);
-  popupAdd.classList.remove('popup_opened');
-}
+// ====================Abrir e fechar Popup Edit================================
 
-// ==================== Edit Popup================================
+editButton.addEventListener('click', () => {
+  openPopup(popupEdit)
+})
 
-editButton.addEventListener('click', editPopupClassToDisplay)
-function editPopupClassToDisplay() {
-  document.addEventListener("keydown", escapeDelete);
-  popupEdit.classList.add('popup_opened');
-}
+editCloseButton.addEventListener("click", () => {
+  popupEdit.classList.remove("popup_opened")
+});
 
-editCloseButton.addEventListener('click', removeDisplayEditPopupClass)
-function removeDisplayEditPopupClass(e) {
-  e.preventDefault();
-  document.removeEventListener("keydown", escapeDelete);
-  popupEdit.classList.remove('popup_opened');
-}
+// ==================== Button Save do Popup Edit================================
 
-// ==================== Button Save================================
-
-
-saveButton.addEventListener('click', saveNewInputValues)
+popupEdit.addEventListener("submit", saveNewInputValues)
 function saveNewInputValues(e) {
   e.preventDefault();
-    perfilName.textContent = inputName.value;
-    perfilProfission.textContent = inputProfission.value;
-    removeDisplayEditPopupClass(e)
+  perfilName.textContent = inputName.value;
+  perfilProfission.textContent = inputProfission.value;
+  closePopups(popupEdit)
 }
 
-// ==================== Função Button ESC================================
+// ========= Criação de cards novo e exportação dos valores para o arquivo Card ======================
 
-function escapeDelete (evt) {
-  if (evt.key === "Escape") {
-    popup.forEach((element) => {
-      element.classList.remove("popup_opened");
-  });
-};
+formAddPost.addEventListener("submit", (event) => {
+  event.preventDefault();
+  const cardsItem = {
+    name: titleCard.value,
+    link: urlImage.value,
+  };
+
+  const newCard = new Card(cardsItem, "#template", handleOpenPopup)
+  const cardElement =  newCard._generatedCard()
+  elementWithAllImages.prepend(cardElement)
+  formAddPost.reset();
+});
+
+// ==================== Abrir Popup Screen================================
+
+function handleOpenPopup (image) {
+  popupImage.classList.add("popup_opened")
+  document.addEventListener("keydown", (evt) => {
+    closeEsc(evt, popupImage)
+  })
+  popupImage.querySelector(".popup-screen-image").src = image
 }
 
+// ==================== Button Close "X" para o Popup Screen================================
+
+imageClose.addEventListener('click', ImageScreen)
+function ImageScreen() {
+  popupImage.classList.remove('popup_opened');
+}
+
+// ==================== Delete Button================================
+
+function removeCardElement(event) {
+  const cardToRemove = event.target.closest(".card__places");
+  if (cardToRemove) {
+    cardToRemove.remove();
+  }
+}
+
+function deleteCard(event) {
+  if (event.target.classList.contains("card__remove")) {
+    removeCardElement(event);
+  }
+}
+elementWithAllImages.addEventListener("click", deleteCard);
+
+// ==================== Button Like================================
+
+function likeImage(event) {
+  if (event.target.classList.contains("card__image")) {
+    const cardUnlike = event.target;
+    const isLiked = cardUnlike.getAttribute("data-liked") === "true";
+
+    if (isLiked) {
+      cardUnlike.src = "./images/card__image-2.jpg"; // Alteração da imagem para "não curtir"
+      cardUnlike.setAttribute("data-liked", "false");
+    } else {
+      cardUnlike.src = "./images/img-info.jpg"; // Alteração da imagem para "curtir"
+      cardUnlike.setAttribute("data-liked", "true");
+    }
+  }}
+elementWithAllImages.addEventListener("click", likeImage);
+
+// ==================== Fechar os Popups precionando fora deles=============================
 
 popup.forEach((container) => {
   container.addEventListener("click", (evt) => {
@@ -76,93 +129,19 @@ popup.forEach((container) => {
   });
 });
 
-const initialCards = [
-  {
-    name: "Vale de Yosemite",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_yosemite.jpg"
-  },
-  {
-    name: "Lago Louise",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lake-louise.jpg"
-  },
-  {
-    name: "Montanhas Carecas",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_bald-mountains.jpg"
-  },
-  {
-    name: "Latemar",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_latemar.jpg"
-  },
-  {
-    name: "Parque Nacional da Vanoise ",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_vanoise.jpg"
-  },
-  {
-    name: "Lago di Braies",
-    link: "https://practicum-content.s3.us-west-1.amazonaws.com/web-code/moved_lago.jpg"
-  }
-];
+// ====================Função para deixar o cards já gerados quando atualizar a página   ================================
 
-function renderCard(card) {
-  const cardTemplate = document.querySelector("#template").content
-  const cardElement = cardTemplate.querySelector(".card__places").cloneNode(true)
-  cardElement.querySelector(".card__title").textContent = card.name
-  cardElement.querySelector(".card__photo").setAttribute("src", card.link)
-  cardElement.querySelector(".card__photo").setAttribute("alt", card.name)
-
-  cardElement.querySelector('.card__image').addEventListener("click", (event) => {
-    if (event.target.getAttribute('src') == "./images/card__image-2.jpg") {
-      event.target.setAttribute('src', "./images/img-info.jpg");
-    }
-    else {
-      event.target.setAttribute('src', "./images/card__image-2.jpg");
-    }
+window.addEventListener("load", () => {
+  const cardArray = initialCards.map((data) => new Card(data, "#template", handleOpenPopup))
+  cardArray.forEach((card) => {
+    const cardElements = card._generatedCard()
+    elementWithAllImages.append(cardElements)
   })
+})
 
-  cardElement.querySelector('.card__remove').addEventListener("click", (e) => {
-    e.target.parentElement.remove()
-  })
+// ==================== Aqui é onde está sendo exportado para o FormValidator as informações de validação dos Popups =======================================
 
-  cardElement.querySelector(".card__photo").addEventListener("click", () => {
-    const imageScreen = document.querySelector(".popup-screen-image");
-    const titleScreen = document.querySelector(".popup-screen-title");
-
-    imageScreen.setAttribute("src", card.link);
-    imageScreen.setAttribute("alt", card.name);
-    titleScreen.textContent = card.name;
-    popupImage.classList.add('popup_opened')
-  });
-  return cardElement
-}
-
-imageClose.addEventListener("click", removeDisplayImagePopupClass)
-function removeDisplayImagePopupClass(e) {
-  e.preventDefault();
-  popupImage.classList.remove('popup_opened');
-}
-
-
-initialCards.forEach((image) => {
-  const cardCreated = renderCard(image);
-  elementWithAllImages.prepend(cardCreated);
-});
-
-
-createButton.addEventListener("click", addCard)
-function addCard(e) {
-  e.preventDefault()
-  const title = document.querySelector(".input-título")
-  const urlImage = document.querySelector(".input-link")
-
-  if (title.value == "" || urlImage.value == "") {
-    alert("Por favor preencha os campos corretamente!")
-    return
-  }
-  elementWithAllImages.prepend(renderCard({
-    name: title.value,
-    link: urlImage.value
-  }))
-  title.value = ""
-  urlImage.value = ""
-  removeDisplayAddPopupClass(e)
-}
+const configForm = {errorClass: "input__error", buttonErrorClass: "button-inactive"}
+const configSpan = {errorSpan: "span-active"}
+new FormValidator(formEditProfile, saveButton, configForm, configSpan)._enableValidation()
+new FormValidator(formAddPost, createButton, configForm, configSpan)._enableValidation()
