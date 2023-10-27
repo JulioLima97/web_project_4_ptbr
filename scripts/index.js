@@ -26,6 +26,9 @@ const urlImage = document.querySelector(".input-link")
 const formEditProfile = document.querySelector(".form-edit")
 const formAddPost = document.querySelector("#form-add-profile")
 
+inputName.value = perfilName.textContent
+inputProfission.value = perfilProfission.textContent
+
 // ====================Abrir e fechar Popup Add================================
 
 addButton.addEventListener('click', () => {
