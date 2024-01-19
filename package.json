@@ -1,0 +1,31 @@
+{
+  "name": "web_project_4_ptbr",
+  "version": "1.0.0",
+  "description": "/*  - Título: \"EUA Afora\"\r     - Descrição: Um site que mostra ao usuário que logar, o perfil de um usuário que decidiu mostrar fotos de regiões para o qual já viajou nos Estados Unidos. \r     - Planos de finalização do projeto: Através de todo o aprendizado que tive neste curso eu reproduzi este site. Desta vez dos conhecimentos já usados no projeto passado, desta vez com os conhecimentos obtido durante o curso foi incrementado o a ferramenta do javascript a utilização de uma caixa de entrada feita para preencher o nome e a informção do usuário para ser exibida no site.\r */",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack serve"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/preset-env": "^7.23.2",
+    "autoprefixer": "^10.4.16",
+    "babel-loader": "^9.1.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.8.1",
+    "cssnano": "^6.0.1",
+    "html-webpack-plugin": "^5.5.3",
+    "mini-css-extract-plugin": "^2.7.6",
+    "postcss-loader": "^7.3.3",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^4.15.1"
+  },
+  "dependencies": {
+    "core-js": "^3.33.2"
+  }
+}

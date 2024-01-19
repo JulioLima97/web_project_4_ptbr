@@ -37,7 +37,6 @@ export default class FormValidator {
   }
   _enableValidation() {
     this.inputList.forEach((elementInput) => {
-      console.log(elementInput)
       elementInput.addEventListener("input", () => {
         this._toggleButtonState()
         this._showImputError(elementInput.nextElementSibling, elementInput.validationMessage)
